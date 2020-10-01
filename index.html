@@ -5,45 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sadia's Site</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <!-- <script src="util.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href = "main.css" rel = "stylesheet" type = "text/css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <script src="aboutMe.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">About Me<span class="sr-only">(current)</span></a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li> -->
-       
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Canvas Pages
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="CanvasPractice/Lines/index.html">Lines</a>
-                  <div class="dropdown-divider"></div> 
-                  <a class="dropdown-item" href="CanvasPractice/Quilt/index.html">Quilt</a> 
-                  <a class="dropdown-item" href="CanvasPractice/Quilt/QuiltVariation1/index.html">Quilt Variation 1</a>
-                  <a class="dropdown-item" href="CanvasPractice/Quilt/QuiltVariation2/index.html">Quilt Variation 2</a> 
-                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="CanvasPractice/Rectangles/index.html">Rectangles</a>
-                </div>
-              </li>
-          </ul>
-        </div>
-      </nav>
+    
+    <div class="navbar">
+        <a href="index.html">About Me</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Canvas Pages
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#">RAndom</a>
+            <a href="CanvasPractice/Lines/index.html">Lines</a>
+            <a href="CanvasPractice/Quilt/index.html">Quilt</a> 
+            <a  href="CanvasPractice/Quilt/QuiltVariation1/index.html">Quilt Variation 1</a>
+            <a href="CanvasPractice/Quilt/QuiltVariation2/index.html">Quilt Variation 2</a> 
+            <a href="CanvasPractice/Rectangles/index.html">Rectangles</a>
+            </div>
+        </div> 
+    </div>
     <header class="jumbotron">
       <div class="row">
         <div class="col-5"></div>
@@ -151,11 +141,5 @@
         <!-- Grid row -->
       </div>
     </footer>
-
-
-
-
-
-
 </html>
 
