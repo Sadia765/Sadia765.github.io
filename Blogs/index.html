@@ -124,17 +124,73 @@
     </nav>
     <header class="jumbotron">
       <div class="row">
-        <h1>My Journey of Becoming a Software Engineer</h1>
+        <h1>My Journey as a Software Engineer</h1>
       </div>
     </header>
     <main class="container">
+      
+      
+      
       <div class="card border-info mb-3">
-        <div class="card-header bg-transparent border-success">Title</div>
+        <div class="card-header bg-transparent border-success">My Navbar Journey</div>
         <div class="card-body text-success">
-          <h5 class="card-title">Subtitle: Project Name</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Project: Sadia's Site</h5>
+          <p class="card-text">After observing navigation examples on W3Schools and Bootstrap, I referenced the Bootstrap examples to build my navigation. 
+            I added two dropdown menues to my navbar so that one could reflect all my HTML5 Canvas drawings and one could reflect my contact and website information.
+          </p>
+          <p>As I pushed my code to Sadia's Site and tested if the navbar and its dropdown worked to my satisfaction, I noticed that when the second
+            dropdown was open it was getting cut off. It wasn't showing all four of the open dropdown's rounded corners.  
+          </p>
+          <p>To fix this issue, I inspected each element and attribute within the navigation, since the issue dealt with the navbar. 
+            I noticed that one of the elements had the attribute `ml-auto`, and observed that when I used `mr-auto` instead, all the words on the navbar were left aligned.
+          </p>
+          <p>
+            However, I preferred `ml-auto`. If only I could keep my navbar words right aligned but shift them all slightly left so the entire second dropdown would show when 
+            it's opened...but I could do this with some padding! Thus, in my CSS file, I added some padding on the right of the class `ml-auto`. 
+            Now, both my dropdowns are entirely shown when they are open!
+          </p>
+
         </div>
-        <div class="card-footer bg-transparent border-success">Date Written</div>
+        <div class="card-footer bg-transparent border-success">October 2nd, 2020</div>
+      </div>
+
+      <!-- <div class="card border-info mb-3">
+        <div class="card-header bg-transparent border-success">Inserting a Navbar</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Project: Sadia's Site</h5>
+          <p class="card-text">Details about including navbar with canvas, about me, blog, etc!</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">October 1st, 2020</div>
+      </div> -->
+
+      <div class="card border-info mb-3">
+        <div class="card-header bg-transparent border-success">Calculator Site Hosted on an AWS S3 Bucket</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Project: Calculator Site</h5>
+          <p class="card-text">I built my <a href="https://calculator-sadia765.s3.us-east-2.amazonaws.com/index.html">Calculator Site</a> 
+            using JavaScript, Bootstrap, CSS, and HTML5. It is a site that solves certain equations and simplifies expressions. 
+            To put this site on an Amazon Web Services (AWS) S3 bucket, I used 
+            <a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html">this guide</a> to make an S3 bucket, 
+            and then uploaded all my files for this site. However, when I went to this S3 bucket site, I noticed two errors in the console:  
+          </p>
+          <ul>
+            <li>missing favicon</li>
+            <li>requesting an insecure resource</li>
+          </ul>
+        </div>
+        <div class="card-footer bg-transparent border-success">September 28th, 2020</div>
+      </div>
+
+      <div class="card border-info mb-3">
+        <div class="card-header bg-transparent border-success">Reconnecting With Computer Science!</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Project: General</h5>
+          <p class="card-text">It feels like so much has happened since I graduated DePaul's Master's program. 
+            I started off learning JavaScript (JS) on freeCodeCamp, YouTube videos, and now I am learning on AlgoExpert. 
+            Recently, I also learned CSS, HTML5, and HTML5 Canvas by watching relevant YouTube videos. 
+            I started working on a couple of project ideas, and am excited to fulfill these projects! </p>
+        </div>
+        <div class="card-footer bg-transparent border-success">April 7th, 2020</div>
       </div>
       <div class="row">
 
