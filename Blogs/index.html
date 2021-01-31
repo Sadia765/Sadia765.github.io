@@ -20,7 +20,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Sadia's Site</a>
+      <a class="navbar-brand" href="../index.html">Sadia's Site</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -33,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">About Me</a>
+            <a class="nav-link" href="../aboutMe.html">About Me</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="index.html">Blog</a>
@@ -129,7 +129,54 @@
     </header>
     <main class="container">
       
-      
+      <div class="card border-info mb-3">
+        <div class="card-header bg-transparent border-success">Removed Errors in AWS S3 Bucket Console</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Project: Calculator Site</h5>
+          <p class="card-text">
+            When I hosted my Calculator Site on an AWS S3 bucket, I received two errors: favicon error and Secure Socket Layer (SSL) Error.
+          </p>
+          <p>
+            Every time the Calculator Site's pages were loaded, I would get a favicon error. A favicon is the tiny picture shown on the 
+            site's web browser tab. When I uploaded my site's files onto the S3 bucket, I didn't incorporate a favicon in my files. 
+            Hence, there was no favicon shown on the Calculator Site's web browser tab and the favicon error was being shown on the 
+            site's console.   
+          </p>
+          <p>
+            To resolve the favicon error, I first found out what a favicon was and found a site that would convert a picture into a 
+            standard favicon sized image. Since my site calculated the solution of quadratic equations and system of linear equations, 
+            I wanted to make my favicon be a calculator. With this in mind, I picked my favorite calculator image on Google, 
+            uploaded it to the favicon converter site, and downloaded the favicon sized calculator. With this favicon, I saved it in my repo 
+            and linked it at the beginning of each of my Calculator Site's HTML5 files. Now, the tiny calculator favicon is shown on each of the 
+            site's pages and the favicon error in the console is gone!
+          </p>
+          <p>
+            On my Calculator Site, there is a page that simplifies expressions. Once you put an expression in the input box, it sends this input to an 
+            to an external API which simplifies the input and sends back the simplified expression. Now this simplified expression that should have been 
+            sent back from the external API was not being shown once the Calculator Site was hosted on an AWS S3 bucket. This page was working locally, 
+            but for some reason was giving an SSL error every time the user tried to simplify an expression on the hosted site.
+          </p>
+          <p>
+            After some research, I learned a url beginning with https had a Secure Socket Layer (i.e. SSL) certificate where as a url beginning 
+            with http did not. This certificate allows information to be encrypted and makes the connections secure. Now the absence of this SSL 
+            certificate raises a SSL error. 
+          </p>
+          <p>
+            That is, when the user pressed the simplify button to simplify a given expression, the hosted site, whose url began with https, would call an 
+            external API, whose url began with http. However, since this hosted site had a SSL certificate and called a site without a SSL certificate, 
+            the SSL error was raised. For this reason, the request to simplify the given expression was not sent and no simplified expression 
+            was shown on the hosted site's page.             
+          </p>
+          <p>
+            When the user clicked the simplify button, it called the simplificationOnScreen function. This function was responsible for sending the given expression 
+            to the external API and posting the external API's simplification on the hosted site. Within this function, I added a conditional statement that made sure 
+            if the url that called the external API began with https, then the external API's url would also begin with https. Otherwise, it would call the external 
+            API's url beginning with http. This way, the secure version of the hosted site would send and receive its response with https urls, the insecure version of 
+            the hosted site would send and receive its response with http urls, and the files for the Calculator Site would work locally!
+          </p>
+        </div>
+        <div class="card-footer bg-transparent border-success">October 2nd, 2020</div>
+      </div>
       
       <div class="card border-info mb-3">
         <div class="card-header bg-transparent border-success">My Navbar Journey</div>
@@ -162,6 +209,22 @@
         </div>
         <div class="card-footer bg-transparent border-success">October 1st, 2020</div>
       </div> -->
+
+      <div class="card border-info mb-3">
+        <div class="card-header bg-transparent border-success">Fixed Footer</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Project: Calculator Site</h5>
+          <p class="card-text">I wanted to have a footer at the bottom to feature my contact information, my portfolio site, i.e. Sadia's Site, 
+            and my Github and LinkedIn. However, everytime I tried to put in a footer, it would either go over the input boxes or the words on 
+            my `About Me` page when the web browser window was extremely small. After trying out many footer templates, I finally found a sticky 
+            footer on CSS-Tricks that worked. I played with all the CSS of this footer, and I concluded the main aspect that was missing from 
+            all my previous attempts at making a footer was that I did not include a minimum height for the CSS selector main. Allowing the CSS 
+            selector main's minimum height to be viewport height of 47 kept the footer at the bottom of both the `About Me` page and the pages 
+            with user inputs. So be sure to have a minimum height for when your footer should begin on the page!
+          </p>
+        </div>
+        <div class="card-footer bg-transparent border-success">October 1st, 2020</div>
+      </div>
 
       <div class="card border-info mb-3">
         <div class="card-header bg-transparent border-success">Calculator Site Hosted on an AWS S3 Bucket</div>
